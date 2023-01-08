@@ -1,13 +1,16 @@
 #!/bin/bash
 
-# encode the strings from the csv file in /strings and creates all the
+# encode the strings from the csv file in MOD_PATH/strings and creates all the
 # w3strings files
 
 source variables.sh
 
-pushd "$MOD_PATH/strings"
+pushd "$MOD_PATH/strings" > /dev/null
 
+echo "removing any prior encoded w3strings..."
 rm -f *.w3strings
+
+echo "encoding w3strings for mod id $NEXUS_MOD_ID..."
 "$MOD_KIT_PATH/w3strings.exe" --encode en.w3strings.csv --id-space $NEXUS_MOD_ID
 
 rm -f *.ws
@@ -29,4 +32,4 @@ cp en.w3strings ru.w3strings
 cp en.w3strings zh.w3strings
 cp en.w3strings cn.w3strings
 
-popd
+popd  > /dev/null
