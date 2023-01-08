@@ -1,13 +1,20 @@
 #!/bin/bash
+# this script installs and runs the game with logs going to your terminal!
 
 source variables.sh
 source install.sh
 
-# delete compiled redscripts to force recompile
-pushd "$GAME_PATH"
+pushd "$GAME_PATH" > /dev/null
+
+echo "removing compiled redscripts to force recompile..."
 rm -f content/content0/*.redscripts
-pushd "$GAME_PATH/bin/$BIN_FOLDER_NAME"
+
+echo "running game..."
+pushd "$GAME_PATH/bin/$BIN_FOLDER_NAME" > /dev/null
 ./witcher3.exe -debugscripts &
-tail -F "$LOG_FILE_PATH"
-popd
-popd
+
+echo "attaching log to terminal..."
+tail -F "$W3_USER_SETTINGS_PATH/scriptslog.txt"
+
+popd > /dev/null
+popd > /dev/null
