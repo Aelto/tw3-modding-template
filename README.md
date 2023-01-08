@@ -21,14 +21,14 @@ Search entire project for `TODO` and make sure they end up `TODONE`. These inclu
 
 ### Encoding Strings
 
-```cmd
+```sh
 cd scripts
 ./encode-csv-strings.sh
 ```
 
 ### Releasing
 
-```cmd
+```sh
 cd scripts
 ./release.sh
 ```
@@ -37,7 +37,7 @@ cd scripts
 
 ### Installing
 
-```cmd
+```sh
 cd scripts
 ./install.sh
 ```
@@ -46,7 +46,7 @@ cd scripts
 
 ### Running the game
 
-```cmd
+```sh
 cd scripts
 ./run-game.bat
 ```
