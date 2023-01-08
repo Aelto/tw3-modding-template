@@ -1,18 +1,19 @@
 # tw3-modding-template
 
 Modding template based heavily on Aelto's modding template. This modding template provides a development environment to produce a witcher 3 mod that is well 
-suited for scripting mods that utilize a menu and localized strings (this template defaults to English). It provides the following utilities:
+suited for scripting mods that utilize a menu and localized strings (this template defaults to English). It uses shell scripts instead of bat scripts so to use
+the utilities you will need a bash style shell (i.e. `gitbash`). It provides the following utilities:
 
   1.  encoding w3strings
   2.  installing to game
-  3.  starting game
+  3.  starting game (and viewing logs)
   4.  making a release
   
 ## How to Use
 
 Search entire project for `TODO` and make sure they end up `TODONE`. These include:
 
-  1.  updating `scripts\variables.cmd`
+  1.  updating `scripts\variables.sh`
   2.  updating `mod-menu.xml`
   3.  updating `strings\en.w3strings.csv`
   
@@ -22,14 +23,14 @@ Search entire project for `TODO` and make sure they end up `TODONE`. These inclu
 
 ```cmd
 cd scripts
-.\encode-csv-strings.bat
+./encode-csv-strings.sh
 ```
 
 ### Releasing
 
 ```cmd
 cd scripts
-.\release.bat
+./release.sh
 ```
 
 *Note: release will automatically encode strings*
@@ -38,7 +39,7 @@ cd scripts
 
 ```cmd
 cd scripts
-.\install.bat
+./install.sh
 ```
 
 *Note: On next gen, for first install you will need to manually update `dx11FileList.txt` and `dx12FileList.txt`*
@@ -47,5 +48,7 @@ cd scripts
 
 ```cmd
 cd scripts
-.\run-game.bat
+./run-game.bat
 ```
+
+*Note: running the game does the following: remove compiled redscripts, install, start the game in debug, tails the logs
