@@ -1,9 +1,15 @@
 @echo off
 
-REM update this path to point to your witcher 3 directory
-set gamePath=D:\programs\Steam\steamapps\common\The Witcher 3
+REM TODO update this path to point to your witcher 3 directory
+set gamePath={yourGamePath}
+
+REM TODO update this to your modkit path. nexus modkit doesn't ship with w3strings.exe remember to add it to the same folder
+set modKitPath={yourModKitPath}
+
+REM TODO update these based on your mod you are developing
+set nexusModId={yourModId}
+set modName={yourModName}
+set releaseName={yourReleaseFolderName}
 
 REM do not update anything below this line
 set modPath=%cd%\..
-set modName=modFriendlyDeath
-set modKitPath=D:\programs\witcher_3_mod_tools\bin\x64

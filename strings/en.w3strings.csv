@@ -1,8 +1,17 @@
+;TODO: update nexus mod id (nmid in id column) and strings
 ;meta[language=en]
 ; id      |key(hex)|key(str)| text
-2115494001|        |panel_prefix_name|Mod Name
-2115494002|        |panel_combat_prefix_name|Mod Name
-2115494003|        |preset_Mods_prefix_name|Mod Name
-2115494004|        |preset_Mods_combat_prefix_name|Mod Name
-2115494005|        |preset_value_prefix_defaults|Defaults
-2115494006|        |option_prefix_mod_enabled|<font color="#30a14e">MOD ENABLED</font>
+211nmid001|        |panel_Mods|Mods
+211nmid002|        |panel_alchemy_and_equipment|Alchemy and Equipment
+211nmid003|        |panel_camera|Camera
+211nmid004|        |panel_characters|Characters
+211nmid005|        |panel_combat|Combat
+211nmid006|        |panel_gameplay|Gameplay
+211nmid007|        |panel_quests_and_adventures|Quests and Adventures
+211nmid008|        |panel_user_interface|User Interface
+211nmid009|        |panel_visuals_and_graphics|Visuals and Graphics
+211nmid010|        |panel_miscellaneous|Miscellaneous
+211nmid001|        |panel_{prefix}_name|{Mod Name}
+211nmid003|        |preset_Mods_{menu-strings-cat}_{prefix}_name|{Mod Name}
+211nmid005|        |preset_value_{prefix}_default|Default
+211nmid006|        |option_{prefix}_mod_enabled|MOD ENABLED
