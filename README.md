@@ -51,4 +51,4 @@ cd scripts
 ./run-game.bat
 ```
 
-*Note: running the game does the following: remove compiled redscripts, install, start the game in debug, tails the logs
+*Note: running the game does the following: remove compiled redscripts, install, start the game in debug, tails the logs*
